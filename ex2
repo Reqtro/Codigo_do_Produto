@@ -1,0 +1,42 @@
+/*Crie um algoritmo que deve ter como entrada um número inteiro no intervalo de 1 a 4327 que
+representa o código de um produto, um número inteiro que representa quantidade vendida do
+produto e um número real que representa o valor unitário do produto. Após o usuário entrar com
+os três valores deve ser apresentado o resultado da multiplicação da quantidade do produto e o
+seu valor unitário. Para encerrar o algoritmo o usuário deve digitar um número diferente do
+intervalo de 1 a 4327 no código do produto, e apresentar a mensagem “Obrigado por usar o
+algoritmo”.
+*/
+
+package ex2_lista;
+import java.util.Scanner;
+
+/**
+ *
+ * @author reqtr
+ */
+public class Ex2_Lista {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner (System.in);
+        int quantidade = 0;
+        int codigo = 1;
+        double valor = 0;
+        double conta = 0;
+        
+        while(codigo >= 1 && codigo <= 4327){
+            System.out.println("Digite o codigo do produto:");
+            codigo = sc.nextInt();
+            System.out.println("Digite a quantidde vendida:");
+            quantidade = sc.nextInt();
+            System.out.println("Digite o valor unitario:");
+            valor = sc.nextDouble();
+            conta = (quantidade * valor);
+            System.out.println("O total da venda e:" + conta);
+        }
+        System.out.println("Obrigado por usar o algoritmo");
+            }
+    }
